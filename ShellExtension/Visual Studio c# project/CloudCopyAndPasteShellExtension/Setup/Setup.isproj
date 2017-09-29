@@ -1,0 +1,51 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+	<PropertyGroup>
+		<!-- Select a Product Configuration -->
+		<InstallShieldProductConfiguration>Express</InstallShieldProductConfiguration>
+		<!-- Select a Visual Studio Configuration / InstallShield Release -->
+		<Configuration>Debug</Configuration>
+		<InstallShieldRelease>$(Configuration)</InstallShieldRelease>
+	</PropertyGroup>
+	<ItemGroup>
+		<!-- The InstallShieldProject item selects the project to build -->
+		<InstallShieldProject Include="$(MSBuildProjectDirectory)\$(MSBuildProjectName).isl"/>
+		<!-- The InstallShieldReleaseFlags sets Release Flags -->
+		<!--<InstallShieldReleaseFlags Include=""/>-->
+		<!-- The InstallShieldMergeModulePath specifies what directories are
+		searched for Merge Modules -->
+		<!--<InstallShieldMergeModulePath Include=""/>-->
+	</ItemGroup>
+	<ItemGroup>
+		<!-- The ProjectReference items refer to any Visual Studio solutions you want to automatically probe for Project Output Groups.  -->
+	</ItemGroup>
+	<ItemGroup>
+		<!-- The TaggedOutputs items allow you to explicitly add extra files to output groups. Each item must include both Name and OutputGroup, as well as TargetPath metadata values. -->
+		<!--<TaggedOutputs Include="C:\My Test Exe.exe">
+			<Name>My Test Project</Name>
+			<OutputGroup>Primary output</OutputGroup>
+			<TargetPath>My Test Exe.exe</TargetPath>
+		</TaggedOutputs> -->
+	</ItemGroup>
+	<Import Project="$(MSBuildExtensionsPath32)\InstallShield\2012SpringLimited\InstallShield.targets"/>
+	<ItemGroup>
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\ClipboardMonitor\ClipboardMonitor.csproj">
+			<Name>ClipboardMonitor</Name>
+			<Project>{E4B1E860-427B-4083-85D2-597145AE85F9}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\CloudCopyAndPasteShellExtension\CloudCopyAndPasteShellExtension.csproj">
+			<Name>CloudCopyAndPasteShellExtension</Name>
+			<Project>{E2DF8D13-F5A2-4583-BCE9-0BA003E87816}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\FunctionalityLibrary\FunctionalityLibrary.csproj">
+			<Name>FunctionalityLibrary</Name>
+			<Project>{319D3E6B-4F52-49D5-900E-A603F3DD5179}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\..\..\..\Sharefile CCP\SharefileCCPLib\SharefileCCPLib\SharefileCCPLib.csproj">
+			<Name>SharefileCCPLib</Name>
+			<Project>{DC5981E2-2CC2-4B66-AAB5-3816AE037E6A}</Project>
+		</ProjectReference>
+	</ItemGroup>
+
+	</Project>

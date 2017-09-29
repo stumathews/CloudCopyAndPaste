@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E2DF8D13-F5A2-4583-BCE9-0BA003E87816}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CloudCopyAndPasteShellExtension</RootNamespace>
+    <AssemblyName>CloudCopyAndPasteShellExtension</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>CloudCopyAndPaste.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Apex.WinForms">
+      <HintPath>..\packages\SharpShellTools.1.9.0\lib\Apex.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Nini, Version=1.1.0.0, Culture=neutral, PublicKeyToken=691faec150a7fa7b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Trove.Nini.1.1.0.0\lib\net20\Nini.dll</HintPath>
+    </Reference>
+    <Reference Include="ServerManager">
+      <HintPath>..\packages\SharpShellTools.1.9.0\lib\ServerManager.exe</HintPath>
+    </Reference>
+    <Reference Include="SharpShell">
+      <HintPath>..\packages\SharpShellTools.1.9.0\lib\SharpShell.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CloudCopyAndPasteShell.cs" />
+    <Compile Include="Common\ClipboardData.cs" />
+    <Compile Include="Images.Designer.cs">
+      <DependentUpon>Images.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CloudCopyAndPaste.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FunctionalityLibrary\FunctionalityLibrary.csproj">
+      <Project>{319d3e6b-4f52-49d5-900e-a603f3dd5179}</Project>
+      <Name>FunctionalityLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1373656437_Cloud Upload On.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1373656515_Cloud Download On.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1373656547_mobileme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1373656559_weather_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1373656566_weather_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1373656574_Cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1373656583_weather_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1373656601_Cofigure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1373657788_cog_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1373658196_config.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cloud Upload On.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloud3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1379820829_519838-50_Cloud_Arrow_Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7z.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aiff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\asc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\audio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bz2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cfc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cfm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\class.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\css.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\csv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\divx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eml.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hlp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\htm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\html.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\java.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jpeg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jpg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\js.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lua.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mp3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mpg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\odc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\odf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\odg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\odi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\odp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ods.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\odt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ogg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pgp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\php.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ppt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\py.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rpm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rtf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sql.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\swf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sxc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sxd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sxi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sxw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tex.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tgz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\txt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vcf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vsd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wav.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wmv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xml.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xpi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xvid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard_paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard_copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copyANDpaste.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloud16.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>copy "$(ProjectDir)cloudconfig.ini" "$(TargetDir)"</PreBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

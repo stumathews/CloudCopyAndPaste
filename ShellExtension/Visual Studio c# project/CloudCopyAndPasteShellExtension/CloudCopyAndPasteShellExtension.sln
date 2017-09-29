@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudCopyAndPasteShellExtension", "CloudCopyAndPasteShellExtension\CloudCopyAndPasteShellExtension.csproj", "{E2DF8D13-F5A2-4583-BCE9-0BA003E87816}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharefileCCPLib", "..\..\..\Sharefile CCP\SharefileCCPLib\SharefileCCPLib\SharefileCCPLib.csproj", "{DC5981E2-2CC2-4B66-AAB5-3816AE037E6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{7935702F-2EE7-4216-A5C8-2D3E8929A040}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tester", "..\..\..\Sharefile CCP\GUI\Tester\Tester.csproj", "{57C181B1-9B7B-4D72-819D-A925EC8BC2B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionalityLibrary", "FunctionalityLibrary\FunctionalityLibrary.csproj", "{319D3E6B-4F52-49D5-900E-A603F3DD5179}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudCopyAndpasteService", "CloudCopyAndpasteService\CloudCopyAndpasteService.csproj", "{9F3A383B-5803-4F96-9816-E515BF1498AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClipboardMonitor", "ClipboardMonitor\ClipboardMonitor.csproj", "{E4B1E860-427B-4083-85D2-597145AE85F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2DF8D13-F5A2-4583-BCE9-0BA003E87816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2DF8D13-F5A2-4583-BCE9-0BA003E87816}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2DF8D13-F5A2-4583-BCE9-0BA003E87816}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2DF8D13-F5A2-4583-BCE9-0BA003E87816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC5981E2-2CC2-4B66-AAB5-3816AE037E6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC5981E2-2CC2-4B66-AAB5-3816AE037E6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC5981E2-2CC2-4B66-AAB5-3816AE037E6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC5981E2-2CC2-4B66-AAB5-3816AE037E6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57C181B1-9B7B-4D72-819D-A925EC8BC2B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57C181B1-9B7B-4D72-819D-A925EC8BC2B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57C181B1-9B7B-4D72-819D-A925EC8BC2B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57C181B1-9B7B-4D72-819D-A925EC8BC2B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{319D3E6B-4F52-49D5-900E-A603F3DD5179}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{319D3E6B-4F52-49D5-900E-A603F3DD5179}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{319D3E6B-4F52-49D5-900E-A603F3DD5179}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{319D3E6B-4F52-49D5-900E-A603F3DD5179}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F3A383B-5803-4F96-9816-E515BF1498AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F3A383B-5803-4F96-9816-E515BF1498AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F3A383B-5803-4F96-9816-E515BF1498AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F3A383B-5803-4F96-9816-E515BF1498AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4B1E860-427B-4083-85D2-597145AE85F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4B1E860-427B-4083-85D2-597145AE85F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4B1E860-427B-4083-85D2-597145AE85F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4B1E860-427B-4083-85D2-597145AE85F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
